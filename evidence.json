@@ -1,0 +1,96 @@
+{
+  "deployment": {
+    "hash": "0xd934345a3d093e5a8c1cac36a0b2e500b9bbe3d649da8b5d98405caf301e5dab",
+    "status": "FINALIZED",
+    "consensus": "MAJORITY_AGREE",
+    "execution": "SUCCESS",
+    "reason": null,
+    "address": "0x188d401C0364C1708c2AD8eac45Db4120257EEad",
+    "chainId": 61999
+  },
+  "transactions": [
+    {
+      "label": "independent_rule_compilation",
+      "hash": "0x0904bae9ceaa11b5f5f193dab1f5626095d0e6983cf4e8a97c9e11c815c8d2f1",
+      "signer": "0x58b9a5882ee3926bb96fb0a4ed7c0a284fabf8d2",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "reason": null
+    },
+    {
+      "label": "premature_close",
+      "hash": "0xab6b25f54e84596d29e5664d211917087fefa7882dfc069fa9e05bf105974bc9",
+      "signer": "0x58b9a5882ee3926bb96fb0a4ed7c0a284fabf8d2",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "reason": null
+    },
+    {
+      "label": "unauthorized_attestation",
+      "hash": "0x9948fb89b2fc8bfed879c89130e3298a1dbf1602770e06d90850bb894cbb2df7",
+      "signer": "0x58b9a5882ee3926bb96fb0a4ed7c0a284fabf8d2",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "reason": null
+    },
+    {
+      "label": "cover_dual_queue_cut",
+      "hash": "0x6037739a7b0a10a31f98c2c7f00dccfd49b45396a5dba34ae4c171d8cd65055c",
+      "signer": "0xe950896fcddeb3bbd570e632160f9bdf2924f81d",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "reason": null
+    },
+    {
+      "label": "duplicate_attestation",
+      "hash": "0x28775849acf40486dd43f6302851bc6bd81eede436bf50f21685698fba612fd2",
+      "signer": "0xe950896fcddeb3bbd570e632160f9bdf2924f81d",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "reason": null
+    },
+    {
+      "label": "cover_routing_cut",
+      "hash": "0xe5f4d00068eba330dbc87cf1c9c020cc6e2a69405ca60f9a935f8bd816638f2a",
+      "signer": "0xe950896fcddeb3bbd570e632160f9bdf2924f81d",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "reason": null
+    },
+    {
+      "label": "close_covered_review",
+      "hash": "0x11e4e11c862560277eb3ca721bed40f860b9bf8d7f8418bfee1377a6d911a46a",
+      "signer": "0x58b9a5882ee3926bb96fb0a4ed7c0a284fabf8d2",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "reason": null
+    }
+  ],
+  "finalState": {
+    "owner": "0x58b9a5882ee3926bb96fb0a4ed7c0a284fabf8d2",
+    "reviewer": "0xe950896fcddeb3bbd570e632160f9bdf2924f81d",
+    "state": "CLOSED",
+    "events": [
+      "primary queue unavailable",
+      "backup queue unavailable",
+      "routing table unavailable"
+    ],
+    "rule": "Delivery fails if the routing table is unavailable, or if both the primary queue and the backup queue are unavailable.",
+    "cuts": [
+      3,
+      4
+    ],
+    "uncovered": [],
+    "attestations": {
+      "0": "Fixture QA-01: primary queue failover control reviewed",
+      "2": "Fixture RT-02: routing cache fallback control reviewed"
+    }
+  }
+}

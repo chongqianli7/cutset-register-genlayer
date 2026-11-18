@@ -1,0 +1,9 @@
+{
+  "hash": "0xd934345a3d093e5a8c1cac36a0b2e500b9bbe3d649da8b5d98405caf301e5dab",
+  "status": "FINALIZED",
+  "consensus": "MAJORITY_AGREE",
+  "execution": "SUCCESS",
+  "reason": null,
+  "address": "0x188d401C0364C1708c2AD8eac45Db4120257EEad",
+  "chainId": 61999
+}
