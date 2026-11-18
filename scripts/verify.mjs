@@ -1,3 +1,4 @@
+import {TransactionHashVariant} from 'genlayer-js/types'
 import {abi} from 'genlayer-js'
 import assert from 'node:assert/strict'
 import {readFileSync} from 'node:fs'
@@ -32,7 +33,7 @@ for(const saved of transactions){
   assert.equal(tx.to_address.toLowerCase(),deployment.address.toLowerCase())
 }
 const read=async (functionName,args)=>JSON.parse(await client.readContract({
-  address:deployment.address,functionName,args,stateStatus:'finalized',
+  address:deployment.address,functionName,args,transactionHashVariant:TransactionHashVariant.LATEST_FINAL,
 }))
 const model=await read('review',['queue-resilience'])
 assert.deepEqual(model,finalState)
